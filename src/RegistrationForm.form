@@ -149,7 +149,7 @@
         </constraints>
         <properties>
           <font name="Segoe Print" size="18" style="1"/>
-          <text value="Register"/>
+          <text value="Inscription"/>
         </properties>
       </component>
       <component id="4bdb2" class="javax.swing.JButton" binding="btnCancel">
@@ -158,7 +158,7 @@
         </constraints>
         <properties>
           <font name="Segoe Print" size="18" style="1"/>
-          <text value="Cancel"/>
+          <text value="Annuler"/>
         </properties>
       </component>
       <vspacer id="bf7db">

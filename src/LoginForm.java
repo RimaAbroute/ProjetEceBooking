@@ -3,8 +3,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
-import javax.swing.JOptionPane;
-
 
 public class LoginForm extends JDialog {
     private JTextField tfEmail;
@@ -13,7 +11,7 @@ public class LoginForm extends JDialog {
     private JButton btnCancel;
     private JPanel loginPanel;
 
-    public LoginForm(ActionListener parent) {
+    public LoginForm(JFrame parent) {
         super(parent);
         setTitle("Connexion");
         setContentPane(loginPanel);
@@ -35,8 +33,8 @@ public class LoginForm extends JDialog {
                 }
                 else {
                     JOptionPane.showMessageDialog(LoginForm.this,
-                            "Email ou Mot de passe invalide",
-                            "Essayez à nouveau",
+                            "Email ou mot de passe invalide",
+                            "Essayer à nouveau",
                             JOptionPane.ERROR_MESSAGE);
                 }
             }
@@ -61,22 +59,22 @@ public class LoginForm extends JDialog {
 
         try{
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
-            // Connected to database successfully...
 
             Statement stmt = conn.createStatement();
             String sql = "SELECT * FROM users WHERE email=? AND password=?";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
+
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
                 user = new Client();
                 user.name = resultSet.getString("name");
                 user.email = resultSet.getString("email");
-                user.phone = resultSet.getString("phone");
-                user.address = resultSet.getString("address");
-                user.password = resultSet.getString("password");
+                user.phone = resultSet.getString("telephone");
+                user.address = resultSet.getString("addresse");
+                user.password = resultSet.getString("mot de passe");
             }
 
             stmt.close();
@@ -86,27 +84,25 @@ public class LoginForm extends JDialog {
             e.printStackTrace();
         }
 
-        return user;
-    }
 
-    private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {
-        new RegistrationForm(this).setVisible(true);
-        this.dispose();
+        return user;
     }
 
     public static void main(String[] args) {
         LoginForm loginForm = new LoginForm(null);
         Client user = loginForm.user;
         if (user != null) {
-            System.out.println("Successful Authentication of: " + user.name);
+            System.out.println("Connexion reussie " + user.name);
             System.out.println("          Email: " + user.email);
-            System.out.println("          Phone: " + user.phone);
-            System.out.println("          Address: " + user.address);
+            System.out.println("          Telephone: " + user.phone);
+            System.out.println("          Addresse: " + user.address);
         }
         else {
-            System.out.println("Authentication canceled");
+            System.out.println("Connexion annulée");
         }
-
     }
 }
+
+
+
 

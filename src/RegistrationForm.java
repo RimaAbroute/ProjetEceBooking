@@ -18,13 +18,13 @@ public class RegistrationForm extends JDialog {
     private JButton btnCancel;
     private JPanel registerPanel;
 
-    public RegistrationForm(LoginForm homescreen) {
-
-        setTitle("Create a new account");
+    public RegistrationForm(JFrame parent) {
+        super(parent);
+        setTitle("Creer un nouveau compte");
         setContentPane(registerPanel);
         setMinimumSize(new Dimension(450, 474));
         setModal(true);
-
+        setLocationRelativeTo(parent);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         btnRegister.addActionListener(new ActionListener() {
@@ -53,16 +53,16 @@ public class RegistrationForm extends JDialog {
 
         if (name.isEmpty() || email.isEmpty() || phone.isEmpty() || address.isEmpty() || password.isEmpty()) {
             JOptionPane.showMessageDialog(this,
-                    "Please enter all fields",
-                    "Try again",
+                    "Entrez toutes les cases",
+                    "Essayez à nouveau",
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
 
         if (!password.equals(confirmPassword)) {
             JOptionPane.showMessageDialog(this,
-                    "Confirm Password does not match",
-                    "Try again",
+                    "Les mots de passes ne sont pas identiques",
+                    "Essayez à nouveau",
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
@@ -73,8 +73,8 @@ public class RegistrationForm extends JDialog {
         }
         else {
             JOptionPane.showMessageDialog(this,
-                    "Failed to register new user",
-                    "Try again",
+                    "Inscription échouée",
+                    "Essayez à nouveau",
                     JOptionPane.ERROR_MESSAGE);
         }
     }
@@ -120,14 +120,14 @@ public class RegistrationForm extends JDialog {
         return user;
     }
 
-    public void main(String[] args) {
-        RegistrationForm myForm = new RegistrationForm(this);
+    public static void main(String[] args) {
+        RegistrationForm myForm = new RegistrationForm(null);
         Client user = myForm.user;
         if (user != null) {
-            System.out.println("Successful registration of: " + user.name);
+            System.out.println("Inscription réussie de: " + user.name);
         }
         else {
-            System.out.println("Registration canceled");
+            System.out.println("Inscription annulée");
         }
     }
 }
