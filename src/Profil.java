@@ -194,7 +194,7 @@ public class Profil extends javax.swing.JFrame {
 
         try {
 
-            String url = "jdbc:mysql://localhost:3306/ecebooking";
+            String url = "jdbc:mysql://localhost:3306/database";
             String user = "root";
             String pass  = "";
 

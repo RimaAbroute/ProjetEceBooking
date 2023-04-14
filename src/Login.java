@@ -11,10 +11,6 @@ import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
 
-
-    /**
-     * Creates new form Login
-     */
     public Login() {
         initComponents();
 
@@ -109,7 +105,7 @@ public class Login extends javax.swing.JFrame {
 
         try {
 
-            String url = "jdbc:mysql://localhost:3306/ecebooking";
+            String url = "jdbc:mysql://localhost:3306/database";
             String user = "root";
             String pass = "";
 

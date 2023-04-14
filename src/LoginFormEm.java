@@ -3,14 +3,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 
-public class LoginForm extends JDialog {
+public class LoginFormEm extends JDialog {
     private JTextField tfEmail;
     private JPasswordField pfMdp;
     private JButton btnOK;
     private JButton btnCancel;
     private JPanel loginPanel;
 
-    public LoginForm() {
+    public LoginFormEm() {
         add(loginPanel);
         setTitle("Ece Booking");
         setSize(550,550);
@@ -27,23 +27,22 @@ public class LoginForm extends JDialog {
                 user = getAuthenticatedUser(email, password);
 
                 if (user != null) {
-                    dispose();
+                    btnOK.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            Employee Employee = new Employee();
+                            Employee.setVisible(true);
+                            dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                        }
+                    });
                 }
                 else {
-                    JOptionPane.showMessageDialog(LoginForm.this,
+                    JOptionPane.showMessageDialog(LoginFormEm.this,
                             "Email ou mot de passe invalide",
                             "Essayer à nouveau",
                             JOptionPane.ERROR_MESSAGE);
                 }
-            }
-        });
 
-        btnOK.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Rechercheh Rechercheh = new Rechercheh();
-                Rechercheh.setVisible(true);
-                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
             }
         });
         btnCancel.addActionListener(new ActionListener() {
@@ -68,7 +67,7 @@ public class LoginForm extends JDialog {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
 
             Statement stmt = conn.createStatement();
-            String sql = "SELECT * FROM users WHERE email=? AND password=?";
+            String sql = "SELECT * FROM logine WHERE email=? AND password=?";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
@@ -96,8 +95,8 @@ public class LoginForm extends JDialog {
     }
 
     public static void main(String[] args) {
-        LoginForm loginForm = new LoginForm();
-        Client user = loginForm.user;
+        LoginFormEm loginFormEm = new LoginFormEm();
+        Client user = loginFormEm.user;
         if (user != null) {
             System.out.println("Connexion reussie " + user.name);
             System.out.println("          Email: " + user.email);
@@ -110,7 +109,3 @@ public class LoginForm extends JDialog {
         }
     }
 }
-
-
-
-

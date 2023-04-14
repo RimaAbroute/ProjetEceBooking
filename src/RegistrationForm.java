@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -18,14 +17,13 @@ public class RegistrationForm extends JDialog {
     private JButton btnCancel;
     private JPanel registerPanel;
 
-    public RegistrationForm(JFrame parent) {
-        super(parent);
-        setTitle("Creer un nouveau compte");
-        setContentPane(registerPanel);
-        setMinimumSize(new Dimension(450, 474));
-        setModal(true);
-        setLocationRelativeTo(parent);
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    public RegistrationForm() {
+        add(registerPanel);
+        setTitle("Ece Booking");
+        setSize(550,550);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setVisible(true);
 
         btnRegister.addActionListener(new ActionListener() {
             @Override
@@ -121,7 +119,7 @@ public class RegistrationForm extends JDialog {
     }
 
     public static void main(String[] args) {
-        RegistrationForm myForm = new RegistrationForm(null);
+        RegistrationForm myForm = new RegistrationForm();
         Client user = myForm.user;
         if (user != null) {
             System.out.println("Inscription réussie de: " + user.name);

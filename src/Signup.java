@@ -13,9 +13,6 @@ import javax.swing.table.DefaultTableModel;
 
 public class Signup extends javax.swing.JFrame {
 
-    /**
-     * Creates new form NewJFrame2
-     */
     public Signup() {
         initComponents();
 
@@ -197,7 +194,7 @@ public class Signup extends javax.swing.JFrame {
         if (password.equals(confirmPassword)) {
             try {
 
-                String url = "jdbc:mysql://localhost:3306/ecebooking";
+                String url = "jdbc:mysql://localhost:3306/database";
                 String user = "root";
                 String pass = "";
 

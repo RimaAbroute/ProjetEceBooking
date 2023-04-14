@@ -17,19 +17,19 @@ public class hebergement {
         this.pricePerDay = pricePerDay;
     }
 
-    public int getcar_id() {
+    public int gethebergement_id() {
         return id;
     }
 
-    public void setcar_id(int car_id) {
-        this.id = car_id;
+    public void sethebergement_id(int hebergement_id) {
+        this.id = hebergement_id;
     }
 
     public String getmake() {
         return type;
     }
 
-    public void setmake(String carMake) {
+    public void setmake(String hebergementMake) {
         this.type = type;
     }
 
@@ -46,7 +46,6 @@ public class hebergement {
     }
 
     public boolean isAvailable(Date startDate, Date endDate, List<Orders> orders) {
-        // Check if the car has any orders that overlap with the given date range
         for (Orders order : orders) {
             if (order.getEndDate().after(startDate) && order.getStartDate().before(endDate)) {
                 return false;

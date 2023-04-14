@@ -71,7 +71,7 @@ public class payement extends javax.swing.JFrame {
 
         {Connection conn = null;
             try {
-                String url       = "jdbc:mysql://localhost:3306/ecebooking";
+                String url       = "jdbc:mysql://localhost:3306/database";
                 String user      = "root";
                 String password  = "";
 
@@ -128,12 +128,12 @@ public class payement extends javax.swing.JFrame {
         if (str.length() != 5 || str.charAt(2) != '/') {
             return false;
         }
-        // Split the string into month and year parts and check if they are numeric
+
         String[] parts = str.split("/");
         if (parts.length != 2 || !isNumeric(parts[0]) || !isNumeric(parts[1])) {
             return false;
         }
-        // Parse the month and year integers and check if they are within valid ranges
+
         int month = Integer.parseInt(parts[0]);
         int year = Integer.parseInt(parts[1]);
         return (month >= 1 && month <= 12 && year >= 21 && year <= 99);

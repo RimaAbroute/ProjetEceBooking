@@ -278,7 +278,7 @@ public class carreg extends javax.swing.JFrame {
             {Connection conn = null;
                 try {
                     // db parameters - ptest is the name of the database
-                    String url       = "jdbc:mysql://localhost:3306/ecebooking";
+                    String url       = "jdbc:mysql://localhost:3306/database";
                     String user      = "root";
                     String password  = "";
 
@@ -333,7 +333,7 @@ public class carreg extends javax.swing.JFrame {
         {Connection conn = null;
             try {
                 // db parameters - ptest is the name of the database
-                String url       = "jdbc:mysql://localhost:3306/ecebooking";
+                String url       = "jdbc:mysql://localhost:3306/database";
                 String user      = "root";
                 String password  = "";
 
@@ -349,7 +349,7 @@ public class carreg extends javax.swing.JFrame {
                 pst.setDouble(5,price);
                 pst.setDouble(6,promotion);
                 pst.executeUpdate();
-                JOptionPane.showMessageDialog(this,"Heberrgement ajoute");
+                JOptionPane.showMessageDialog(this,"Hebergement ajoute");
 
                 txttype.setText("");
                 txtmodel.setText("");
@@ -381,7 +381,7 @@ public class carreg extends javax.swing.JFrame {
                 double promotion = Double.parseDouble(txtdiscount.getText());
 
                 // db parameters - ptest is the name of the database
-                String url       = "jdbc:mysql://localhost:3306/ecebooking";
+                String url       = "jdbc:mysql://localhost:3306/database";
                 String user      = "root";
                 String password  = "";
 
@@ -420,12 +420,11 @@ public class carreg extends javax.swing.JFrame {
         int c;
         {Connection conn = null;
             try {
-                // db parameters - ptest is the name of the database
-                String url       = "jdbc:mysql://localhost:3306/ecebooking";
+                String url       = "jdbc:mysql://localhost:3306/database";
                 String user      = "root";
                 String password  = "";
 
-                // create a connection to the database
+
                 conn = DriverManager.getConnection(url, user, password);
                 pst = conn.prepareStatement("select * from hebergements");
                 ResultSet rs = pst.executeQuery();
@@ -467,7 +466,7 @@ public class carreg extends javax.swing.JFrame {
     public void autoID()
     {Connection conn = null;
         try {
-            String url       = "jdbc:mysql://localhost:3306/ecebooking";
+            String url       = "jdbc:mysql://localhost:3306/database";
             String user      = "root";
             String password  = "";
 
@@ -521,7 +520,6 @@ public class carreg extends javax.swing.JFrame {
             }
         });
     }
-    // Variables declaration - do not modify
     private javax.swing.JComboBox<String> Comavl;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
@@ -542,5 +540,5 @@ public class carreg extends javax.swing.JFrame {
     private javax.swing.JTextField txtprice;
     private javax.swing.JTextField txtregno;
     private javax.swing.JTextField txttype;
-    // End of variables declaration
+
 }

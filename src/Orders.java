@@ -78,7 +78,7 @@ public class Orders {
         // Retrieve the car from the database based on the car ID
         hebergement hebergement = null;
         try {
-            String url = "jdbc:mysql://localhost:3306/ecebooking";
+            String url = "jdbc:mysql://localhost:3306/database";
             String user = "root";
             String password = "";
 
@@ -103,12 +103,12 @@ public class Orders {
         // Retrieve the customer from the database based on the customer ID
         Customers customers = null;
         try {
-            String url = "jdbc:mysql://localhost:3306/ecebooking";
+            String url = "jdbc:mysql://localhost:3306/database";
             String user = "root";
             String password = "";
 
             Connection cnx = DriverManager.getConnection(url, user, password);
-            PreparedStatement stmt = cnx.prepareStatement("SELECT * FROM customers WHERE customerID = ?");
+            PreparedStatement stmt = cnx.prepareStatement("SELECT * FROM clients WHERE clientID = ?");
             stmt.setInt(1, usersID);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {

@@ -25,7 +25,7 @@
           <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="48" style="1"/>
+          <font name="Sylfaen" size="48" style="1"/>
           <text value="Inscription"/>
         </properties>
       </component>
@@ -34,7 +34,7 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
           <text value="Nom"/>
         </properties>
       </component>
@@ -45,7 +45,7 @@
           </grid>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
         </properties>
       </component>
       <component id="68c84" class="javax.swing.JLabel">
@@ -53,7 +53,7 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
           <text value="Email"/>
         </properties>
       </component>
@@ -64,7 +64,7 @@
           </grid>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
         </properties>
       </component>
       <component id="5a2c3" class="javax.swing.JLabel">
@@ -72,7 +72,7 @@
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
           <text value="Numero"/>
         </properties>
       </component>
@@ -83,7 +83,7 @@
           </grid>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
         </properties>
       </component>
       <component id="c9dc9" class="javax.swing.JLabel">
@@ -91,7 +91,7 @@
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
           <text value="Adresse"/>
         </properties>
       </component>
@@ -102,7 +102,7 @@
           </grid>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
         </properties>
       </component>
       <component id="f942e" class="javax.swing.JLabel">
@@ -110,7 +110,7 @@
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
           <text value="Mot de passe"/>
         </properties>
       </component>
@@ -121,7 +121,7 @@
           </grid>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
         </properties>
       </component>
       <component id="2e71e" class="javax.swing.JLabel">
@@ -129,7 +129,7 @@
           <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
           <text value="Confirmer le mot de passe"/>
         </properties>
       </component>
@@ -140,7 +140,7 @@
           </grid>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
         </properties>
       </component>
       <component id="2c9de" class="javax.swing.JButton" binding="btnRegister">
@@ -148,7 +148,7 @@
           <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
           <text value="Inscription"/>
         </properties>
       </component>
@@ -157,7 +157,7 @@
           <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="Segoe Print" size="18" style="1"/>
+          <font name="Sylfaen" size="18" style="1"/>
           <text value="Annuler"/>
         </properties>
       </component>

@@ -40,8 +40,8 @@ public class hebergement_rental extends javax.swing.JFrame {
 
         {Connection conn = null;
             try {
-                // db parameters - ptest is the name of the database
-                String url       = "jdbc:mysql://localhost:3306/ecebooking";
+
+                String url       = "jdbc:mysql://localhost:3306/database";
                 String user      = "root";
                 String password  = "";
 
@@ -65,7 +65,7 @@ public class hebergement_rental extends javax.swing.JFrame {
     private void table_update() {
         Connection conn = null;
         try {
-            String url = "jdbc:mysql://localhost:3306/ecebooking";
+            String url = "jdbc:mysql://localhost:3306/database";
             String user = "root";
             String password = "";
 
@@ -346,11 +346,11 @@ public class hebergement_rental extends javax.swing.JFrame {
         String cust_id = txtcustname.getText();
 
         if (cust_id.equals("")) {
-            JOptionPane.showMessageDialog(this, "Please enter the customer name.");
+            JOptionPane.showMessageDialog(this, "Entrer le nom du client");
             return;
         }
         if (txtdate.getDate() == null || txtdue.getDate() == null) {
-            JOptionPane.showMessageDialog(this, "Please select the start and end dates.");
+            JOptionPane.showMessageDialog(this, "Selectionner une date");
             return;
         }
         SimpleDateFormat Date_Format = new SimpleDateFormat("yyyy-MM-dd");
@@ -361,9 +361,9 @@ public class hebergement_rental extends javax.swing.JFrame {
         Connection conn = null;
         try {
             // db parameters - ptest is the name of the database
-            String url = "jdbc:mysql://localhost:3306/car_rental";
+            String url = "jdbc:mysql://localhost:3306/database";
             String user = "root";
-            String password = "root";
+            String password = "";
 
             // create a connection to the database
             conn = DriverManager.getConnection(url, user, password);
@@ -392,7 +392,7 @@ public class hebergement_rental extends javax.swing.JFrame {
 
             // If the selected car is not available, display an error message
             if (available.equals("No")) {
-                JOptionPane.showMessageDialog(this, "Selected car is not available.");
+                JOptionPane.showMessageDialog(this, "Hebergement selectionne n'est pas disponible.");
                 return;
             }
             // insert order into orders table
@@ -428,11 +428,10 @@ public class hebergement_rental extends javax.swing.JFrame {
     }
 
     private void txtavlActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
     }
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {
-        // TODO add your handling code here:
+
         DefaultTableModel d1 = (DefaultTableModel)jTable1.getModel();
         int selectIndex = jTable1.getSelectedRow();
         combocarID.setSelectedItem(d1.getValueAt(selectIndex, 0).toString());
@@ -444,32 +443,29 @@ public class hebergement_rental extends javax.swing.JFrame {
     }
 
     private void txttypeActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
     }
 
     private void combocarIDActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
         String car_id = combocarID.getSelectedItem().toString();
         Connection conn = null;
         try {
-            String url = "jdbc:mysql://localhost:3306/car_rental";
+            String url = "jdbc:mysql://localhost:3306/database";
             String user = "root";
-            String password = "root";
+            String password = "";
 
             conn = DriverManager.getConnection(url, user, password);
-            pst2 = conn.prepareStatement("SELECT * FROM cars WHERE cars_no = ?");
+            pst2 = conn.prepareStatement("SELECT * FROM hebergements WHERE hebergement_no = ?");
             pst2.setString(1, car_id);
             rs = pst.executeQuery();
             if (rs.next() == false) {
-                JOptionPane.showMessageDialog(this, "Car not found");
+                JOptionPane.showMessageDialog(this, "Hebergement non trouve");
             } else {
                 String type = rs.getString("type");
-                String model = rs.getString("model");
+                String model = rs.getString("lieu");
                 double price = rs.getDouble("PricePerDay");
                 double discount = rs.getDouble("discount");
                 String available = rs.getString("available");
 
-                // Update the text fields with the values of the selected car
                 combocarID.setSelectedItem(car_id);
                 txttype.setText(type);
                 txtmodel.setText(model);
@@ -477,7 +473,6 @@ public class hebergement_rental extends javax.swing.JFrame {
                 txtdiscount.setText(String.valueOf(discount));
                 txtavl.setText(available);
 
-                // Set the enabled status of the text fields based on the availability of the selected car
             }
         } catch (SQLException ex) {
             Logger.getLogger(hebergement_rental.class.getName()).log(Level.SEVERE, null, ex);
@@ -491,16 +486,7 @@ public class hebergement_rental extends javax.swing.JFrame {
 
     }
 
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -550,7 +536,6 @@ public class hebergement_rental extends javax.swing.JFrame {
     private javax.swing.JTextField txtmodel;
     private javax.swing.JTextField txtprice;
     private javax.swing.JTextField txttype;
-    // End of variables declaration
 
 
 }

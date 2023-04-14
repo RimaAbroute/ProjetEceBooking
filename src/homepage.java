@@ -1,9 +1,6 @@
 
 public class homepage extends javax.swing.JFrame {
 
-    /**
-     * Creates new form homepage
-     */
     public homepage() {
         initComponents();
     }
@@ -21,7 +18,7 @@ public class homepage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jToggleButton1.setText("log in ");
+        jToggleButton1.setText("Connexion ");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
@@ -58,7 +55,7 @@ public class homepage extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("HebergementReg");
+        jButton4.setText("Hebergement");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);

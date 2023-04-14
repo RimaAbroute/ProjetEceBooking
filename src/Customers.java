@@ -22,12 +22,12 @@ public class Customers {
 
     public static Customers login(String email, String password) {
         try {
-            String url = "jdbc:mysql://localhost:3306/car_rental";
+            String url = "jdbc:mysql://localhost:3306/database";
             String user = "root";
-            String dbpassword  = "root";
+            String dbpassword  = "";
 
             Connection cnx = DriverManager.getConnection(url, user, dbpassword);
-            PreparedStatement stmt = cnx.prepareStatement("SELECT * FROM customers WHERE email = ? AND password = ?");
+            PreparedStatement stmt = cnx.prepareStatement("SELECT * FROM clients WHERE email = ? AND password = ?");
             stmt.setString(1, email);
             stmt.setString(2, password);
             ResultSet rs = stmt.executeQuery();
@@ -99,12 +99,12 @@ public class Customers {
 
     public void register() {
         try {
-            String url = "jdbc:mysql://localhost:3306/car_rental";
+            String url = "jdbc:mysql://localhost:3306/database";
             String user = "root";
-            String dbpassword  = "root";
+            String dbpassword  = "";
 
             Connection cnx = DriverManager.getConnection(url, user, dbpassword);
-            PreparedStatement stmt = cnx.prepareStatement("INSERT INTO customers (name, type, address, phone, email) VALUES (?, ?, ?, ?, ?)");
+            PreparedStatement stmt = cnx.prepareStatement("INSERT INTO clients (name, type, address, phone, email) VALUES (?, ?, ?, ?, ?)");
             stmt.setString(1, name);
             stmt.setString(2, type);
             stmt.setString(3, address);

@@ -11,5 +11,6 @@
     <orderEntry type="library" name="jcalendar-1.4" level="project" />
     <orderEntry type="library" name="activation" level="project" />
     <orderEntry type="library" name="javax.mail" level="project" />
+    <orderEntry type="library" name="rs2xml" level="project" />
   </component>
 </module>
