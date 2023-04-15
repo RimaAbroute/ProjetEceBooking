@@ -6,8 +6,7 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 
 
-public class Paiement extends JFrame {
-    private JPanel panel1;
+public class Paiement1 extends JFrame {
     private JPanel PaymentPanel;
     private JButton annulerButton;
     private JButton btnPayer;
@@ -15,6 +14,7 @@ public class Paiement extends JFrame {
     private JTextField txtNumero;
     private JTextField txtDatee;
     private JTextField txtCvc;
+    private JPanel PaymentPanell;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Paiement");
@@ -37,8 +37,8 @@ public class Paiement extends JFrame {
     }
 
 
-    public Paiement() {
-        add(panel1);
+    public Paiement1() {
+        add(PaymentPanell);
         setTitle("Paiement");
         setSize(550, 550);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -72,15 +72,19 @@ public class Paiement extends JFrame {
 
                     e1.printStackTrace();
                 }
-            }
+                Remerciement Remerciement = new Remerciement();
+                Remerciement.setVisible(true);
+                    dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                }
+            });
 
-        });
+
         annulerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RechercherNv RechercherNv = new RechercherNv();
-                RechercherNv.setVisible(true);
-                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                hebergement1 hebergement1 = new hebergement1();
+                hebergement1.setVisible(true);
+                dispose(); //
             }
 
         });
@@ -89,4 +93,3 @@ public class Paiement extends JFrame {
 
     }
 }
-

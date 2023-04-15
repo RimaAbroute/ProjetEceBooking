@@ -87,9 +87,9 @@ public class RechercherNv extends JFrame {
                 // Vérifier quelle ligne a été cliquée et rediriger l'utilisateur vers la page correspondante
                 if (row == 0) {
                     // Créer une instance de la classe Hebergement1GUI
-                    hebergement1 hebergement1 = new hebergement1();
+                    hhebergement1 hhebergement1 = new hhebergement1();
                     // Afficher l'interface graphique
-                    hebergement1.setVisible(true);
+                    hhebergement1.setVisible(true);
                 } else if (row == 1) {
                     // Créer une instance de la classe Hebergement2GUI
                     hebergement2 hebergement2 = new hebergement2();

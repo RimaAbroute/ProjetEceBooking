@@ -8,18 +8,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-
-
-
-public class hebergement1 extends JFrame {
-    private JButton btnPayer;
-    private JButton btnAnnuler;
-    private JPanel Heb1Panel;
-    private JTextField textField2;
-    private JTextField textField1;
+public class Remerciement extends JFrame {
+    private JPanel MerciPanel;
+    private JButton btnBienvenue;
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Hebergement ");
+        JFrame frame = new JFrame("Merci ");
     }
 
     Connection con;
@@ -39,32 +33,23 @@ public class hebergement1 extends JFrame {
     }
 
 
-    public hebergement1() {
-        add(Heb1Panel);
-        setTitle("Hebergement");
-        setSize(1400, 600);
+    public Remerciement() {
+        add(MerciPanel);
+        setTitle("Merci");
+        setSize(550, 550);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
         connect();
 
 
-        btnPayer.addActionListener(new ActionListener() {
+        btnBienvenue.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                    Paiement1 Paiement1 = new Paiement1();
-                    Paiement1.setVisible(true);
-                    dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
-                }
-            });
-        btnAnnuler.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Rechercheh Rechercheh = new Rechercheh();
-                Rechercheh.setVisible(true);
+                Homescreen Homescreen = new Homescreen();
+                Homescreen.setVisible(true);
                 dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
             }
-
         });
 
         setVisible(true);

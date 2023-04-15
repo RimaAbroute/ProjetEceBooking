@@ -1,5 +1,4 @@
 package controleur;
-
 import model.User;
 
 import javax.swing.*;
@@ -96,11 +95,24 @@ public class Rechercheh extends JFrame {
                     // Afficher l'interface graphique
                     hebergement2.setVisible(true);
                 }
+                // Vérifier quelle ligne a été cliquée et rediriger l'utilisateur vers la page correspondante
+                if (row == 2) {
+                    // Créer une instance de la classe Hebergement3GUI
+                    hebergement3 hebergement3 = new hebergement3();
+                    // Afficher l'interface graphique
+                    hebergement3.setVisible(true);
+                } else if (row == 3) {
+                    // Créer une instance de la classe Hebergement4GUI
+                    hebergement4 hebergement4 = new hebergement4();
+                    // Afficher l'interface graphique
+                    hebergement4.setVisible(true);
+                }
                 // Fermer la fenêtre actuelle
                 dispose();
             }
         });
     }
+
 
 
     @SuppressWarnings("unchecked")

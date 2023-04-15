@@ -78,8 +78,11 @@ public class Paiement2 extends JFrame {
         annulerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose();
+                hebergement2 hebergement2 = new hebergement2();
+                hebergement2.setVisible(true);
+                dispose(); //
             }
+
         });
 
         setVisible(true);

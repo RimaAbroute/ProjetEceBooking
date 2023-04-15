@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 
 
-public class hebergement1 extends JFrame {
+public class hhebergement1 extends JFrame {
     private JButton btnPayer;
     private JButton btnAnnuler;
     private JPanel Heb1Panel;
@@ -39,10 +39,10 @@ public class hebergement1 extends JFrame {
     }
 
 
-    public hebergement1() {
+    public hhebergement1() {
         add(Heb1Panel);
         setTitle("Hebergement");
-        setSize(1400, 600);
+        setSize(550, 550);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -52,11 +52,11 @@ public class hebergement1 extends JFrame {
         btnPayer.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                    Paiement1 Paiement1 = new Paiement1();
-                    Paiement1.setVisible(true);
-                    dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
-                }
-            });
+                Paiement Paiement = new Paiement();
+                Paiement.setVisible(true);
+                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+            }
+        });
         btnAnnuler.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -53,16 +53,19 @@ public class hebergement2 extends JFrame {
         btnPayer.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Paiement Paiement = new Paiement();
-                Paiement.setVisible(true);
+                Paiement2 Paiement2 = new Paiement2();
+                Paiement2.setVisible(true);
                 dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
             }
         });
         btnAnnuler.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                Rechercheh Rechercheh = new Rechercheh();
+                Rechercheh.setVisible(true);
                 dispose();
             }
+
         });
 
         setVisible(true);

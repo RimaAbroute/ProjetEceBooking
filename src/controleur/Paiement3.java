@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 
 
-public class Paiement extends JFrame {
+public class Paiement3 extends JFrame {
     private JPanel panel1;
     private JPanel PaymentPanel;
     private JButton annulerButton;
@@ -37,7 +37,7 @@ public class Paiement extends JFrame {
     }
 
 
-    public Paiement() {
+    public Paiement3() {
         add(panel1);
         setTitle("Paiement");
         setSize(550, 550);
@@ -78,9 +78,9 @@ public class Paiement extends JFrame {
         annulerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RechercherNv RechercherNv = new RechercherNv();
-                RechercherNv.setVisible(true);
-                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                hebergement3 hebergement3 = new hebergement3();
+                hebergement3.setVisible(true);
+                dispose(); //
             }
 
         });
@@ -89,4 +89,3 @@ public class Paiement extends JFrame {
 
     }
 }
-
