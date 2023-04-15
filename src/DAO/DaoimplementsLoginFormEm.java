@@ -5,10 +5,10 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class DaoimplementsLoginForm implements LoginForm {
+public class DaoimplementsLoginFormEm implements LoginFormEm {
 
     @Override
-    public void LoginForm() throws SQLException {
+    public void LoginFormEm() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/ecebooking";
         String user = "root";
         String password = "";
