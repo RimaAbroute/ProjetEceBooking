@@ -57,7 +57,7 @@
             </constraints>
             <properties>
               <font name="Sylfaen" size="18" style="1"/>
-              <text value="Client"/>
+              <text value="model.Client"/>
             </properties>
           </component>
           <component id="b928b" class="javax.swing.JButton" binding="btnEmploye">

@@ -64,7 +64,7 @@ public class Employee extends JFrame {
 
     public Employee() {
             add(panel1);
-            setTitle("Espace Client");
+            setTitle("Espace model.Client");
             setSize(550,550);
             setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             setLocationRelativeTo(null);
@@ -81,6 +81,7 @@ public class Employee extends JFrame {
                 prix = txtMobile.getText();
                 disponible = txtDispo.getText();
                 try {
+
                     pst = con.prepareStatement("insert into employee(lieu,type,prix,disponible)values(?,?,?, ?)");
                     pst.setString(1, lieu);
                     pst.setString(2, type);
@@ -95,7 +96,6 @@ public class Employee extends JFrame {
                     txtName.requestFocus();
                     txtDispo.setText("");
                 } catch (SQLException e1) {
-
                     e1.printStackTrace();
                 }
             }
