@@ -15,6 +15,8 @@ public class hebergement1 extends JFrame {
     private JButton btnPayer;
     private JButton btnAnnuler;
     private JPanel Heb1Panel;
+    private JTextField textField2;
+    private JTextField textField1;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Hebergement ");
