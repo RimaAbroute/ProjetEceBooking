@@ -10,14 +10,14 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
-
+///
     public Login() {
         initComponents();
 
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">
+
     private void initComponents() {
 
         txtusername = new javax.swing.JTextField();
@@ -137,7 +137,7 @@ public class Login extends javax.swing.JFrame {
     private void txtusernameActionPerformed(java.awt.event.ActionEvent evt) {
 
     }
-
+//main
     public static void main(String args[]) {
 
         try {
