@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="controleur.hebergement1">
+  <grid id="27dc6" binding="Heb1Panel" layout-manager="GridLayoutManager" row-count="5" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="-23" width="1249" height="443"/>
+    </constraints>
+    <properties>
+      <background color="-1974556"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="e3e2e" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Sylfaen" size="24" style="1"/>
+          <text value="Hôtel Austin's Saint Lazare"/>
+        </properties>
+      </component>
+      <vspacer id="b8480">
+        <constraints>
+          <grid row="1" column="4" row-span="3" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="a1bcd" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="vue/hebergement1 (2).jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="aed54" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Sylfaen" size="14" style="1"/>
+          <text value="✔️Wifi gratuit    ✔️Service de chambre    ✔️Parking    ✔️Chauffage    ✔️Ascenseur"/>
+        </properties>
+      </component>
+      <component id="f68e3" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Sylfaen" size="20" style="1"/>
+          <icon value="vue/map.png"/>
+          <text value="26 Rue d'Amsterdam, 9e arr., 75009 Paris, France  "/>
+        </properties>
+      </component>
+      <component id="7f648" class="javax.swing.JButton" binding="btnPayer">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="62" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Sylfaen" size="18" style="1"/>
+          <text value="Payer"/>
+        </properties>
+      </component>
+      <component id="c4b4d" class="javax.swing.JButton" binding="btnAnnuler">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Sylfaen" size="18" style="1"/>
+          <text value="Annuler"/>
+        </properties>
+      </component>
+      <component id="60f91" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Sylfaen" size="14" style="1"/>
+          <text value="Cet hôtel d'Austin est situé dans le centre de Paris, à côté de la gare Saint-Lazare et à 800 mètres de l'opéra Garnier."/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
