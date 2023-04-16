@@ -44,7 +44,7 @@ public class hebergement3 extends JFrame {
     public hebergement3() {
         add(Heb1Panel);
         setTitle("Hebergement");
-        setSize(550, 550);
+        setSize(1400, 600);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -56,7 +56,7 @@ public class hebergement3 extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Paiement3 Paiement3 = new Paiement3();
                 Paiement3.setVisible(true);
-                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                dispose();
             }
         });
         btnAnnuler.addActionListener(new ActionListener() {
@@ -64,7 +64,7 @@ public class hebergement3 extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Rechercheh Rechercheh = new Rechercheh();
                 Rechercheh.setVisible(true);
-                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                dispose();
             }
 
         });

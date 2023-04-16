@@ -24,7 +24,7 @@ public class Homescreen extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 LoginForm loginForm = new LoginForm();
                 loginForm.setVisible(true);
-                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                dispose();
             }
         });
         btnNouveau.addActionListener(new ActionListener() {
@@ -32,7 +32,7 @@ public class Homescreen extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 RegistrationForm RegistrationForm = new RegistrationForm();
                 RegistrationForm.setVisible(true);
-                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                dispose();
             }
         });
         btnEmploye.addActionListener(new ActionListener() {
@@ -45,12 +45,8 @@ public class Homescreen extends JFrame {
         });
      }
 
-
      public static void main(String[]args){
          Homescreen myFrame = new Homescreen();
-
-
-
 
      }
 }

@@ -40,7 +40,7 @@ public class Paiement extends JFrame {
     public Paiement() {
         add(panel1);
         setTitle("Paiement");
-        setSize(550, 550);
+        setSize(550, 600);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -72,15 +72,19 @@ public class Paiement extends JFrame {
 
                     e1.printStackTrace();
                 }
+                Remerciement Remerciement = new Remerciement();
+                Remerciement.setVisible(true);
+                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
             }
-
         });
+
+
         annulerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 RechercherNv RechercherNv = new RechercherNv();
                 RechercherNv.setVisible(true);
-                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                dispose();
             }
 
         });

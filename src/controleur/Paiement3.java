@@ -72,9 +72,13 @@ public class Paiement3 extends JFrame {
 
                     e1.printStackTrace();
                 }
+                Remerciement Remerciement = new Remerciement();
+                Remerciement.setVisible(true);
+                dispose();
             }
-
         });
+
+
         annulerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

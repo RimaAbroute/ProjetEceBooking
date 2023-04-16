@@ -18,7 +18,6 @@ public class RechercherNv extends JFrame {
         initComponents();
         findUsers();
     }
-
     public Connection getConnection() {
         Connection con = null;
 
@@ -79,24 +78,17 @@ public class RechercherNv extends JFrame {
         }
         jTable_Users.setModel(model);
 
-        // Ajouter un MouseListener pour détecter les clics sur les lignes du tableau
         jTable_Users.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-                // Récupérer la ligne sélectionnée
                 int row = jTable_Users.getSelectedRow();
-                // Vérifier quelle ligne a été cliquée et rediriger l'utilisateur vers la page correspondante
                 if (row == 0) {
-                    // Créer une instance de la classe Hebergement1GUI
                     hhebergement1 hhebergement1 = new hhebergement1();
-                    // Afficher l'interface graphique
                     hhebergement1.setVisible(true);
                 } else if (row == 1) {
-                    // Créer une instance de la classe Hebergement2GUI
                     hebergement2 hebergement2 = new hebergement2();
-                    // Afficher l'interface graphique
                     hebergement2.setVisible(true);
                 }
-                // Fermer la fenêtre actuelle
+
                 dispose();
             }
         });

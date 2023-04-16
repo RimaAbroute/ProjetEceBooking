@@ -48,7 +48,7 @@ public class Remerciement extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Homescreen Homescreen = new Homescreen();
                 Homescreen.setVisible(true);
-                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                dispose();
             }
         });
 

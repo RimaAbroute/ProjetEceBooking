@@ -40,7 +40,7 @@ public class Paiement1 extends JFrame {
     public Paiement1() {
         add(PaymentPanell);
         setTitle("Paiement");
-        setSize(550, 550);
+        setSize(550, 600);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);

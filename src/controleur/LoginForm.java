@@ -95,7 +95,6 @@ public class LoginForm extends JDialog {
             e.printStackTrace();
         }
 
-
         return user;
     }
 

@@ -8,9 +8,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-
-
-
 public class BienvenueNv extends JFrame {
     private JPanel panel1;
     private JPanel BienvenuePanel;
@@ -41,7 +38,7 @@ public class BienvenueNv extends JFrame {
     public BienvenueNv() {
         add(BienvenuePanel);
         setTitle("Bienvenue");
-        setSize(550, 550);
+        setSize(550, 650);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -53,7 +50,7 @@ public class BienvenueNv extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 RechercherNv RechercherNv = new RechercherNv();
                 RechercherNv.setVisible(true);
-                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                dispose();
             }
         });
         btnAnnuler.addActionListener(new ActionListener() {

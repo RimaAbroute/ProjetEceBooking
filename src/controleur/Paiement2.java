@@ -40,12 +40,11 @@ public class Paiement2 extends JFrame {
     public Paiement2() {
         add(panel1);
         setTitle("Paiement");
-        setSize(550, 550);
+        setSize(550, 600);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
         connect();
-
 
         btnPayer.addActionListener(new ActionListener() {
             @Override
@@ -72,9 +71,13 @@ public class Paiement2 extends JFrame {
 
                     e1.printStackTrace();
                 }
+                Remerciement Remerciement = new Remerciement();
+                Remerciement.setVisible(true);
+                dispose();
             }
-
         });
+
+
         annulerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

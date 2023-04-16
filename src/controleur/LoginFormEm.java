@@ -1,7 +1,6 @@
 package controleur;
 
 import model.Client;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,7 +35,7 @@ public class LoginFormEm extends JDialog {
                         public void actionPerformed(ActionEvent e) {
                             Employee Employee = new Employee();
                             Employee.setVisible(true);
-                            dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                            dispose();
                         }
                     });
                 }

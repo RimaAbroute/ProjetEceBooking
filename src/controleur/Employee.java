@@ -22,6 +22,7 @@ public class Employee extends JFrame {
     private JTextField txtid;
     private JScrollPane table_1;
     private JTextField txtDispo;
+    private JTextField txtRed;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Employee");
@@ -58,12 +59,6 @@ public class Employee extends JFrame {
     }
 
 
-
-
-
-
-
-
     public Employee() {
             add(panel1);
             setTitle("Espace model.Client");
@@ -76,32 +71,34 @@ public class Employee extends JFrame {
         enregistrerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String lieu, type, prix, disponible;
+                String lieu, type, prix, reduction, disponible;
 
                 lieu = txtName.getText();
                 type = txtSalary.getText();
                 prix = txtMobile.getText();
+                reduction = txtRed.getText();
                 disponible = txtDispo.getText();
                 try {
 
-                    pst = con.prepareStatement("insert into employee(lieu,type,prix,disponible)values(?,?,?, ?)");
+                    pst = con.prepareStatement("insert into employee(lieu,type,prix,reduction,disponible)values(?,?,?, ?)");
                     pst.setString(1, lieu);
                     pst.setString(2, type);
                     pst.setString(3, prix);
-                    pst.setString(4, disponible);
+                    pst.setString(4, reduction);
+                    pst.setString(5, disponible);
                     pst.executeUpdate();
                     JOptionPane.showMessageDialog(null, "Hebergement ajouté avec succés !");
                     table_load();
                     txtName.setText("");
                     txtSalary.setText("");
                     txtMobile.setText("");
+                    txtRed.setText("");
                     txtName.requestFocus();
                     txtDispo.setText("");
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
             }
-
 
         });
         rechercherButton.addActionListener(new ActionListener() {
@@ -110,7 +107,7 @@ public class Employee extends JFrame {
                 try {
                 String empid = txtid.getText();
 
-                pst = con.prepareStatement("select lieu,type,prix, disponible from employee where id = ?");
+                pst = con.prepareStatement("select lieu,type,prix, reduction, disponible from employee where id = ?");
                 pst.setString(1, empid);
                 ResultSet rs = pst.executeQuery();
 
@@ -119,10 +116,12 @@ public class Employee extends JFrame {
                     String lieu = rs.getString(1);
                     String type = rs.getString(2);
                     String prix = rs.getString(3);
-                    String disponible = rs.getString(4);
+                    String reduction = rs.getString(4);
+                    String disponible = rs.getString(5);
                     txtName.setText(lieu);
                     txtSalary.setText(type);
                     txtMobile.setText(prix);
+                    txtRed.setText(disponible);
                     txtDispo.setText(disponible);
 
                 }
@@ -131,6 +130,7 @@ public class Employee extends JFrame {
                     txtName.setText("");
                     txtSalary.setText("");
                     txtMobile.setText("");
+                    txtRed.setText("");
                     txtDispo.setText("");
                     JOptionPane.showMessageDialog(null,"Hebergement introuvable");
 
@@ -146,20 +146,22 @@ public class Employee extends JFrame {
         mettreÀJourButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String empid,lieu, type, prix, disponible;
+                String empid,lieu, type, prix,reduction, disponible;
 
                 lieu = txtName.getText();
                 type = txtSalary.getText();
                 prix = txtMobile.getText();
+                reduction = txtRed.getText();
                 disponible = txtDispo.getText();
                 empid = txtid.getText();
                 try {
-                    pst = con.prepareStatement("update employee set lieu = ?,type = ?,prix = ?,disponible = ? where id = ?");
+                    pst = con.prepareStatement("update employee set lieu = ?,type = ?,prix = ?, reduction = ?, disponible = ? where id = ?");
                     pst.setString(1, lieu);
                     pst.setString(2, type);
                     pst.setString(3, prix);
-                    pst.setString(4, disponible);
-                    pst.setString(5, empid);
+                    pst.setString(4, reduction);
+                    pst.setString(5, disponible);
+                    pst.setString(6, empid);
 
                     pst.executeUpdate();
                     JOptionPane.showMessageDialog(null, "Hebergement mis à jour !");
@@ -168,6 +170,7 @@ public class Employee extends JFrame {
                     txtSalary.setText("");
                     txtMobile.setText("");
                     txtName.requestFocus();
+                    txtRed.setText("");
                     txtDispo.setText("");
                     txtDispo.requestFocus();
                 }
@@ -197,6 +200,7 @@ public class Employee extends JFrame {
                     txtSalary.setText("");
                     txtMobile.setText("");
                     txtName.requestFocus();
+                    txtRed.setText("");
                     txtDispo.setText("");
                     txtDispo.requestFocus();
                 }
@@ -209,7 +213,6 @@ public class Employee extends JFrame {
             }
         });
     }
-
 
 }
 

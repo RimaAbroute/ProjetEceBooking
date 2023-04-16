@@ -9,8 +9,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 
-
-
 public class hhebergement1 extends JFrame {
     private JButton btnPayer;
     private JButton btnAnnuler;
@@ -42,7 +40,7 @@ public class hhebergement1 extends JFrame {
     public hhebergement1() {
         add(Heb1Panel);
         setTitle("Hebergement");
-        setSize(550, 550);
+        setSize(1400, 600);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -54,7 +52,7 @@ public class hhebergement1 extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Paiement Paiement = new Paiement();
                 Paiement.setVisible(true);
-                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                dispose();
             }
         });
         btnAnnuler.addActionListener(new ActionListener() {
@@ -62,7 +60,7 @@ public class hhebergement1 extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Rechercheh Rechercheh = new Rechercheh();
                 Rechercheh.setVisible(true);
-                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                dispose();
             }
 
         });

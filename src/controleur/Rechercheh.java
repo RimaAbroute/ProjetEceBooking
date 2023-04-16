@@ -17,7 +17,6 @@ public class Rechercheh extends JFrame {
         initComponents();
         findUsers();
     }
-
     public Connection getConnection() {
         Connection con = null;
 
@@ -26,7 +25,6 @@ public class Rechercheh extends JFrame {
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
-
         return con;
     }
 
@@ -78,36 +76,24 @@ public class Rechercheh extends JFrame {
         }
         jTable_Users.setModel(model);
 
-        // Ajouter un MouseListener pour détecter les clics sur les lignes du tableau
+
         jTable_Users.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-                // Récupérer la ligne sélectionnée
                 int row = jTable_Users.getSelectedRow();
-                // Vérifier quelle ligne a été cliquée et rediriger l'utilisateur vers la page correspondante
                 if (row == 0) {
-                    // Créer une instance de la classe Hebergement1GUI
                     hebergement1 hebergement1 = new hebergement1();
-                    // Afficher l'interface graphique
                     hebergement1.setVisible(true);
                 } else if (row == 1) {
-                    // Créer une instance de la classe Hebergement2GUI
                     hebergement2 hebergement2 = new hebergement2();
-                    // Afficher l'interface graphique
                     hebergement2.setVisible(true);
                 }
-                // Vérifier quelle ligne a été cliquée et rediriger l'utilisateur vers la page correspondante
                 if (row == 2) {
-                    // Créer une instance de la classe Hebergement3GUI
                     hebergement3 hebergement3 = new hebergement3();
-                    // Afficher l'interface graphique
                     hebergement3.setVisible(true);
                 } else if (row == 3) {
-                    // Créer une instance de la classe Hebergement4GUI
                     hebergement4 hebergement4 = new hebergement4();
-                    // Afficher l'interface graphique
                     hebergement4.setVisible(true);
                 }
-                // Fermer la fenêtre actuelle
                 dispose();
             }
         });
@@ -115,7 +101,6 @@ public class Rechercheh extends JFrame {
 
 
 
-    @SuppressWarnings("unchecked")
     private void initComponents() {
 
         jPanel2 = new JPanel();
@@ -133,9 +118,9 @@ public class Rechercheh extends JFrame {
             }
         });
 
-        jText_Search.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jText_Search.setFont(new java.awt.Font("Tahoma", 1, 18));
 
-        jTable_Users.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTable_Users.setFont(new java.awt.Font("Tahoma", 1, 14));
         jTable_Users.setModel(new DefaultTableModel(
                 new Object[][]{
                         {null, null, null, null},
@@ -193,11 +178,9 @@ public class Rechercheh extends JFrame {
 
 
     private void jButton_SearchActionPerformed(java.awt.event.ActionEvent evt) {
-
         findUsers();
 
     }
-
     public static void main(String args[]) {
         try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
@@ -215,7 +198,6 @@ public class Rechercheh extends JFrame {
         } catch (UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Rechercheh.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Rechercheh().setVisible(true);

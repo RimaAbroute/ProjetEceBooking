@@ -8,9 +8,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-
-
-
 public class hebergement4 extends JFrame {
     private JPanel panel1;
     private JButton btnPayer;
@@ -45,7 +42,7 @@ public class hebergement4 extends JFrame {
     public hebergement4() {
         add(Heb2Panel);
         setTitle("Hebergement");
-        setSize(550, 550);
+        setSize(1400, 600);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -57,7 +54,7 @@ public class hebergement4 extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Paiement4 Paiement4 = new Paiement4();
                 Paiement4.setVisible(true);
-                dispose(); // Fermer la fenêtre actuelle après avoir ouvert la fenêtre de connexion
+                dispose();
             }
         });
         btnAnnuler.addActionListener(new ActionListener() {
